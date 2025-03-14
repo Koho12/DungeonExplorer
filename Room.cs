@@ -7,12 +7,18 @@ namespace DungeonExplorer
         private string description;
         private List<string> items;
 
+        /// <summary>
+        /// Initialises the Room with a description and a list of items
+        /// </summary>
         public Room(string description, List<string> items)
         {
             this.description = description;
             this.items = items;
         }
 
+        /// <summary>
+        /// Gives a description of the room
+        /// </summary>
         public string GetDescription()
         {
             if (items.Count == 0)
@@ -26,11 +32,17 @@ namespace DungeonExplorer
             return description;
         }
 
+        /// <summary>
+        /// Adds an item to the room
+        /// </summary>
         public void RemoveItems(string item)
         {
             items.Remove(item);
         }
 
+        /// <summary>
+        /// Removes the item from the room when picked up by the player
+        /// </summary>
         public List<string> GetItems()
         {
             return items;

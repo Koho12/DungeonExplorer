@@ -9,13 +9,22 @@ namespace DungeonExplorer
         private Player player;
         private Room currentRoom;
 
+        /// <summary>
+        /// Constructor for the Game class, initialises the player and the room
+        /// </summary>
         public Game()
         {
+            // Construct the player with a placeholder name which will be updated once the player input's their name and health
             player = new Player("PlayerName", 100);
             
+            // Constructor of the room with the basic description of the room added into the code
             currentRoom = new Room( "The room is cold and musty, a rusted iron cage sits in the corner, empty but unsettling. There is a potion on the floor.", new List<string> { "potion" });
 
         }
+
+        /// <summary>
+        /// Start method to begin the game, was used to ensure the game was working as intended and as a menu feature
+        /// </summary>
         public void Start()
         {
             
@@ -50,6 +59,9 @@ namespace DungeonExplorer
             }
         }
 
+        /// <summary>
+        /// GameRun method to run the game
+        /// </summary>
         private void GameRun()
         {
             
@@ -95,6 +107,9 @@ namespace DungeonExplorer
             }
         }
 
+        /// <summary>
+        /// used to display the commands for the menu of the game
+        /// </summary>
         private void commands()
         {
             Console.WriteLine("grab item - pick up a given item");
@@ -103,6 +118,10 @@ namespace DungeonExplorer
             Console.WriteLine("exit - leave the game");
         }
 
+
+        /// <summary>
+        /// Method to give the options that relate to the player 
+        /// </summary>
         private void playerOptions()
         {
             Console.WriteLine("Would you like to check health, inventory or name");
@@ -128,6 +147,9 @@ namespace DungeonExplorer
             }
         }
 
+        /// <summary>
+        /// Method to show and edit the name of the player
+        /// </summary>
         private void nameSettings()
         {
             Console.WriteLine("Would you like to 'check' or 'change' your name");
@@ -151,12 +173,18 @@ namespace DungeonExplorer
             GameRun();
         }
 
+        /// <summary>
+        /// shows the surrondings
+        /// </summary>
         private void surroundings()
         {
             Console.WriteLine(currentRoom.GetDescription());
             GameRun();
         }
 
+        /// <summary>
+        /// Method to quit the game
+        /// </summary>
         private void Exit()
         {
             Console.WriteLine($"Thanks for playing, {player.Name}!");
