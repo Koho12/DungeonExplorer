@@ -10,6 +10,9 @@ namespace DungeonExplorer
     {
         static void Main(string[] args)
         {
+            /// <summary>
+            /// main calls the game class and allows the game to start
+            /// </summary>
             Game game = new Game();
             game.Start();
             Console.WriteLine("Waiting for your Implementation");
