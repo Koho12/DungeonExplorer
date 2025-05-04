@@ -41,8 +41,8 @@ namespace DungeonExplorer
             Room secretRoomA = new Room("Secret Room", new List<string> { "body armour" });
             Room secretRoomB = new Room("Secret Room", new List<string> { "big helmet for your head" });
 
-            rightRoom.creature = new Monster("Stinky Pete", 50, 2); //name, health, damage dealt to player when attacked
-            leftRoom.creature = new Monster("Legopeeps the Unruly!!!", 1000, 5); //much bigger health boss, adds variety
+            rightRoom.creature = new Monster("Goblin", 50, 2); //name, health, damage dealt to player when attacked
+            leftRoom.creature = new Monster("Steve", 1000, 5); //much bigger health boss, adds variety
 
             // Connecting rooms
             ConnectRoom(Direction.Centre, centreRoom);
